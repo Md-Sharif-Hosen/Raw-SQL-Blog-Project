@@ -62,3 +62,42 @@ UPDATE categories SET category_name='Computer Science' WHERE id=10;
 DELETE FROM categories WHERE id=10
 
 
+-- CRUD Operations for blogs Table
+--Create: add new blog
+INSERT INTO blogs(title,body,category_id,author_id)
+VALUES('Data Structure','content about technology',9,15);
+
+--Read: Retrieve All blogs
+SELECT*FROM blogs;
+
+--Read: Retrieve a Specific blog by ID
+SELECT*FROM blogs WHERE id=128;
+
+--Read: retrieve all blogs with their category and author information
+SELECT blogs.title, blogs.body, categories.category_name,authors.author_name
+FROM blogs
+JOIN categories ON blogs.category_id=categories.id
+JOIN authors ON blogs.author_id=authors.id;
+
+-- Update: Update a blog's title
+UPDATE blogs SET title ="Data structure New Version" WHERE id=128;
+
+-- Update: Update a blog's category or author
+UPDATE blogs SET category_id=11 ,author_id=16 WHERE id=128;
+
+-- Delete: Delete a blog
+DELETE FROM blogs WHERE id=128;
+
+--get all blogs written by a specific author
+SELECT authors.author_name,blogs.title , blogs.body
+FROM blogs
+JOIN authors ON blogs.author_id=authors.id
+WHERE authors.id=11;
+
+
+--To get all blogs under a specific category
+SELECT categories.category_name,blogs.title, blogs.body
+FROM blogs
+JOIN categories ON blogs.category_id=categories.id
+--  WHERE categories.id=9;
+ WHERE categories.category_name="Technology";

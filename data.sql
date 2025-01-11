@@ -1,8 +1,9 @@
 INSERT INTO authors(author_name) VALUES ('Jane Doe'),('Arif Azad'), ('Saifur Rahmann'),('Hasin Hayder'),('Reema Thareja.');
 
+INSERT INTO authors(author_name) VALUES('Aaron M. Tenenbaum');
 
 INSERT INTO categories(category_name) VALUES('Religion'),('Speken English'),('Technology');
-
+INSERT INTO categories(category_name) VALUES ('Computer Science')
 
 INSERT INTO blogs(title,body,category_id,author_id)
 VALUES
