@@ -1,4 +1,5 @@
-INSERT INTO authors(author_name) VALUES ('Jane Doe'),('Arif Azad'), ('Saifur Rahmann'),('Hasin Hayder');
+INSERT INTO authors(author_name) VALUES ('Jane Doe'),('Arif Azad'), ('Saifur Rahmann'),('Hasin Hayder'),('Reema Thareja.');
+
 
 INSERT INTO categories(category_name) VALUES('Religion'),('Speken English'),('Technology');
 

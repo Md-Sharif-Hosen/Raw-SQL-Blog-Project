@@ -43,3 +43,22 @@ UPDATE authors SET author_name='Mizanur Rahman Sresto' WHERE id=14;
 
 --Delete: Delete an author
 DELETE FROM authors WHERE id=14;
+
+
+-- CRUD Operations for authors Table
+--Create: add new Categories
+INSERT INTO categories(category_name) VALUES("Mathamatics");
+
+--Read: Retrieve All categories
+SELECT*FROM categories;
+
+--Read: Retrieve a Specific category by ID
+SELECT*FROM categories WHERE id=10;
+
+--Update: Update a category's name
+UPDATE categories SET category_name='Computer Science' WHERE id=10;
+
+--Delete: Delete a category
+DELETE FROM categories WHERE id=10
+
+
