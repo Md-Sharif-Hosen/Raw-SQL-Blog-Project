@@ -28,3 +28,18 @@ CREATE TABLE blogs(
     FOREIGN KEY (author_id) REFERENCES authors(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
+-- CRUD Operations for authors Table
+--Create : add new author
+INSERT INTO authors(author_name) VALUES('Mizanur Rahman');
+
+--Read: Retrieve All author
+SELECT*FROM authors;
+
+--Read: Retrieve a Specific author by ID
+SELECT*FROM authors WHERE id=14;
+
+--Update: Update an author's name
+UPDATE authors SET author_name='Mizanur Rahman Sresto' WHERE id=14;
+
+--Delete: Delete an author
+DELETE FROM authors WHERE id=14;
