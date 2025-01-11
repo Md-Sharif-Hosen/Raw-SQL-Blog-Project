@@ -1,11 +1,11 @@
-#create Author Table
+#create Author_Table
 CREATE TABLE authors(
     id INT AUTO_INCREMENT PRIMARY KEY,
     author_name VARCHAR(255) NOT NULL,
     Created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ,
     Updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
     );
-#create Categories Table
+#create Categories_table
 CREATE TABLE categories(
     id INT AUTO_INCREMENT PRIMARY KEY,
     category_name VARCHAR(255) NOT NULL,
@@ -13,18 +13,18 @@ CREATE TABLE categories(
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
-#Create blogs Table
+#Create blogs_Table
+
 CREATE TABLE blogs(
     id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
     body TEXT NOT NULL,
-    author_id INT NOT NULL,
     category_id INT NOT NULL,
+    author_id INT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    Updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 
-    #Set Foreign Key Constraints
-    FOREIGN KEY (author_id) REFERENCES authors(id) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE CASCADE ON UPDATE CASCADE   
+    FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (author_id) REFERENCES authors(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
